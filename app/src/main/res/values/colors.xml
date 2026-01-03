@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="chip_stroke_color">#D1D5DB</color>
+    <color name="purple_200">#BBDEFB</color>
+    <color name="purple_500">#A855F7</color>
+    <color name="purple_700">#7C3AED</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pink_500">#EC4899</color>
+    <color name="green_500">#10B981</color>
+    <color name="gray_600">#6B7280</color>
+    <color name="orange_500">#FF6B00</color>
+    <color name="orange_600">#EA580C</color>
+</resources>

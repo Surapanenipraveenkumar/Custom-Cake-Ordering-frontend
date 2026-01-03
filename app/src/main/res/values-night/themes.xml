@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.CakeOrdering"
+        parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Same colors or dark variants -->
+    </style>
+
+</resources>

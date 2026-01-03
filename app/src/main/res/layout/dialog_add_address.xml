@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dialog_rounded"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Address"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#111827"/>
+
+    <!-- Label Selection -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Label"
+        android:textSize="12sp"
+        android:textColor="#6B7280"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/labelChipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:checked="true"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipWork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Work"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+        </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
+
+    <!-- Full Address -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Full Address *"
+        android:textSize="12sp"
+        android:textColor="#6B7280"/>
+
+    <EditText
+        android:id="@+id/etFullAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_input_field"
+        android:hint="House/Flat No., Building, Street, Area"
+        android:textColorHint="#9CA3AF"
+        android:inputType="textMultiLine"
+        android:minLines="2"
+        android:maxLines="3"
+        android:padding="12dp"
+        android:textSize="14sp"
+        android:textColor="#111827"/>
+
+    <!-- Pincode -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Pincode *"
+        android:textSize="12sp"
+        android:textColor="#6B7280"/>
+
+    <EditText
+        android:id="@+id/etPincode"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_input_field"
+        android:hint="Enter 6-digit pincode"
+        android:textColorHint="#9CA3AF"
+        android:inputType="number"
+        android:maxLength="6"
+        android:paddingHorizontal="12dp"
+        android:textSize="14sp"
+        android:textColor="#111827"/>
+
+    <!-- Landmark -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Landmark (Optional)"
+        android:textSize="12sp"
+        android:textColor="#6B7280"/>
+
+    <EditText
+        android:id="@+id/etLandmark"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_input_field"
+        android:hint="Near temple, opposite mall, etc."
+        android:textColorHint="#9CA3AF"
+        android:inputType="text"
+        android:paddingHorizontal="12dp"
+        android:textSize="14sp"
+        android:textColor="#111827"/>
+
+    <!-- Phone -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Phone Number (Optional)"
+        android:textSize="12sp"
+        android:textColor="#6B7280"/>
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_input_field"
+        android:hint="Contact number for delivery"
+        android:textColorHint="#9CA3AF"
+        android:inputType="phone"
+        android:paddingHorizontal="12dp"
+        android:textSize="14sp"
+        android:textColor="#111827"/>
+
+    <!-- Set as Default Checkbox -->
+    <CheckBox
+        android:id="@+id/cbSetDefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Set as default address"
+        android:textSize="14sp"
+        android:textColor="#374151"/>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="#6B7280"
+            android:backgroundTint="#F3F4F6"
+            style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+        <Button
+            android:id="@+id/btnSaveAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:text="Save Address"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#EC4899"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF5F7">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Back Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_back"
+                android:padding="4dp"
+                app:tint="#111827"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Back"
+                android:textSize="16sp"
+                android:textColor="#111827"/>
+        </LinearLayout>
+
+        <!-- Title Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_order_history"
+                android:padding="8dp"
+                android:background="@drawable/bg_icon_purple"
+                app:tint="@android:color/white"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order History"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827"/>
+
+                <TextView
+                    android:id="@+id/tvTotalOrders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 total orders"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Filter Tabs -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAllOrders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="All Orders"
+                    android:textAllCaps="false"
+                    android:textSize="13sp"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#EC4899"
+                    android:paddingHorizontal="20dp"
+                    app:cornerRadius="20dp"/>
+
+                <Button
+                    android:id="@+id/btnInProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:text="In Progress"
+                    android:textAllCaps="false"
+                    android:textSize="13sp"
+                    android:textColor="#374151"
+                    android:backgroundTint="#E5E7EB"
+                    android:paddingHorizontal="20dp"
+                    app:cornerRadius="20dp"/>
+
+                <Button
+                    android:id="@+id/btnCompleted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Completed"
+                    android:textAllCaps="false"
+                    android:textSize="13sp"
+                    android:textColor="#374151"
+                    android:backgroundTint="#E5E7EB"
+                    android:paddingHorizontal="20dp"
+                    app:cornerRadius="20dp"/>
+
+                <Button
+                    android:id="@+id/btnCancelled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Cancelled"
+                    android:textAllCaps="false"
+                    android:textSize="13sp"
+                    android:textColor="#374151"
+                    android:backgroundTint="#E5E7EB"
+                    android:paddingHorizontal="20dp"
+                    app:cornerRadius="20dp"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!-- Orders List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvOrders"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:clipToPadding="false"/>
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/emptyState"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="32dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_order_history"
+            app:tint="#D1D5DB"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="No orders yet"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#6B7280"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Start ordering your favorite cakes!"
+            android:textSize="14sp"
+            android:textColor="#9CA3AF"/>
+    </LinearLayout>
+
+</LinearLayout>

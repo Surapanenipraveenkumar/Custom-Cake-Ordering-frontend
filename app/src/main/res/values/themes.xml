@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Application Theme -->
+    <style name="Theme.CakeOrdering"
+        parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Primary brand color -->
+        <item name="colorPrimary">#EC4899</item>
+        <item name="colorPrimaryVariant">#DB2777</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <!-- Secondary color -->
+        <item name="colorSecondary">#F472B6</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">#DB2777</item>
+
+        <!-- Navigation bar (bottom system bar) - make it white -->
+        <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+    </style>
+
+</resources>
+

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- ===== HEADER ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎂"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="CakeConnect"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#EC4899"/>
+    </LinearLayout>
+
+    <!-- ===== BACK BUTTON ===== -->
+    <LinearLayout
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←"
+            android:textSize="18sp"
+            android:textColor="#374151"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Back to Cakes"
+            android:textSize="16sp"
+            android:textColor="#374151"/>
+    </LinearLayout>
+
+    <!-- ===== SCROLLABLE CONTENT ===== -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- ===== PROGRESS BAR ===== -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+            <!-- ===== CAKE IMAGE CARD ===== -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivCakeImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_placeholder_image"/>
+
+                    <!-- Favorite Button -->
+                    <FrameLayout
+                        android:id="@+id/btnFavorite"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_gravity="end"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/bg_circle_white"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:id="@+id/ivFavorite"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_heart"
+                            app:tint="#EC4899"/>
+                    </FrameLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ===== CAKE NAME + PRICE ROW ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvCakeName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Loading..."
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="end">
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹0"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#EC4899"/>
+
+                    <!-- Rating -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⭐"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tvRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="4.8 (234)"
+                            android:textSize="13sp"
+                            android:textColor="#6B7280"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ===== BAKER NAME ===== -->
+            <TextView
+                android:id="@+id/tvBakerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Loading bakery..."
+                android:textSize="14sp"
+                android:textColor="#6B7280"/>
+
+            <!-- ===== DESCRIPTION ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Description"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#111827"/>
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="4dp"
+                android:text="Loading description..."
+                android:textSize="13sp"
+                android:textColor="#4B5563"/>
+
+            <!-- ===== TOGGLE CUSTOMIZATION BUTTON ===== -->
+            <Button
+                android:id="@+id/btnToggleCustomization"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                android:text="Hide Customization"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:backgroundTint="#EC4899"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="28dp"/>
+
+            <!-- ===== CUSTOMIZATION OPTIONS CONTAINER ===== -->
+            <LinearLayout
+                android:id="@+id/customizationContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <!-- ===== WEIGHT (KG) ===== -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weight (Kg)"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#374151"/>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/cgWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:flexWrap="wrap"
+                    app:alignItems="flex_start"
+                    app:justifyContent="flex_start"/>
+
+                <!-- ===== SHAPE ===== -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Shape"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#374151"/>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/cgShape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:flexWrap="wrap"
+                    app:alignItems="flex_start"
+                    app:justifyContent="flex_start"/>
+
+                <!-- ===== COLOR ===== -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Color"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#374151"/>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/cgColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:flexWrap="wrap"
+                    app:alignItems="flex_start"
+                    app:justifyContent="flex_start"/>
+
+                <!-- ===== FLAVOR ===== -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Flavor"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#374151"/>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/cgFlavor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:flexWrap="wrap"
+                    app:alignItems="flex_start"
+                    app:justifyContent="flex_start"/>
+
+                <!-- ===== TOPPINGS ===== -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Toppings (Select Multiple)"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#374151"/>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/cgToppings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:flexWrap="wrap"
+                    app:alignItems="flex_start"
+                    app:justifyContent="flex_start"/>
+
+            </LinearLayout>
+
+            <!-- ===== ADD TO CART BUTTON ===== -->
+            <Button
+                android:id="@+id/btnAddToCart"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="🛒 Add to Cart"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:backgroundTint="#EC4899"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="28dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

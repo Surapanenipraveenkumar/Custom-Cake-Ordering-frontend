@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/imgCake"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_cake"
+            android:background="#F5F5F5"/>
+
+        <TextView
+            android:id="@+id/txtCakeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chocolate Dream"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#1F2937"
+            android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/txtCakePrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="₹3600"
+                android:textColor="#F97316"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtOrderCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="34 orders"
+                android:textColor="#6B7280"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnManage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manage"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FFF3E8"
+            android:textColor="#F97316"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

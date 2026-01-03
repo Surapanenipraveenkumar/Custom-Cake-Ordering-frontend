@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_login_gradient"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:padding="24dp"
+        android:elevation="8dp"
+        android:gravity="center">
+
+        <TextView
+            android:text="🎂"
+            android:textSize="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="CakeConnect"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textColor="#111827"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Choose your login type"
+            android:textSize="14sp"
+            android:textColor="#6B7280"
+            android:layout_marginBottom="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Login as Customer"
+            android:textAllCaps="false"
+            android:backgroundTint="#EC4899"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/ic_user"
+            app:iconPadding="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBaker"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Login as Baker"
+            android:textAllCaps="false"
+            android:backgroundTint="#A855F7"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/ic_chef"
+            app:iconPadding="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelivery"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Login as Delivery Person"
+            android:textAllCaps="false"
+            android:backgroundTint="#3B82F6"
+            android:textColor="@android:color/white"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/ic_delivery"
+            app:iconPadding="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

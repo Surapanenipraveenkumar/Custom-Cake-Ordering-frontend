@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Orange when active (baker brand color) -->
+    <item android:color="#F97316" android:state_checked="true"/>
+    <!-- Gray when inactive -->
+    <item android:color="#6B7280" android:state_checked="false"/>
+</selector>

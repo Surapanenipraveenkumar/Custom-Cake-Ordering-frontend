@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDF2F8"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@android:color/white">
+
+            <!-- Baker Portal Title -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎂"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Baker Portal"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#EC4899"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+            <!-- Back Link -->
+            <TextView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="← Back to Dashboard"
+                android:textSize="14sp"
+                android:textColor="#EC4899"
+                android:layout_marginTop="8dp"
+                android:padding="4dp" />
+
+            <!-- Page Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create New Cake"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginTop="12dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Basic Information Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Basic Information"
+                        android:textColor="#111827"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- Cake Name -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cake Name *"
+                        android:textSize="13sp"
+                        android:textColor="#374151"
+                        android:layout_marginTop="16dp" />
+
+                    <EditText
+                        android:id="@+id/etCakeName"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_input_field"
+                        android:hint="e.g., Chocolate Birthday Cake"
+                        android:textColorHint="#9CA3AF"
+                        android:textColor="#111827"
+                        android:textSize="14sp"
+                        android:paddingHorizontal="14dp"
+                        android:inputType="text" />
+
+                    <!-- Description -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description *"
+                        android:textSize="13sp"
+                        android:textColor="#374151"
+                        android:layout_marginTop="14dp" />
+
+                    <EditText
+                        android:id="@+id/etDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_input_field"
+                        android:hint="Describe your cake..."
+                        android:textColorHint="#9CA3AF"
+                        android:textColor="#111827"
+                        android:textSize="14sp"
+                        android:paddingHorizontal="14dp"
+                        android:paddingVertical="12dp"
+                        android:gravity="top"
+                        android:inputType="textMultiLine" />
+
+                    <!-- Base Price -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Base Price (₹) *"
+                        android:textSize="13sp"
+                        android:textColor="#374151"
+                        android:layout_marginTop="14dp" />
+
+                    <EditText
+                        android:id="@+id/etPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_input_field"
+                        android:hint="499.00"
+                        android:textColorHint="#9CA3AF"
+                        android:textColor="#111827"
+                        android:textSize="14sp"
+                        android:paddingHorizontal="14dp"
+                        android:inputType="numberDecimal" />
+
+                    <!-- Image Upload -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Image"
+                        android:textSize="13sp"
+                        android:textColor="#374151"
+                        android:layout_marginTop="14dp" />
+
+                    <FrameLayout
+                        android:id="@+id/imageUploadContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_image_upload">
+
+                        <LinearLayout
+                            android:id="@+id/uploadPlaceholder"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_upload"
+                                app:tint="#9CA3AF" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Upload Image"
+                                android:textSize="14sp"
+                                android:textColor="#6B7280"
+                                android:layout_marginTop="8dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Click to select an image"
+                                android:textSize="12sp"
+                                android:textColor="#9CA3AF" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/imgCakePreview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Customization Options -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Customization Options"
+                android:textColor="#111827"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Select which customization options are available for this cake"
+                android:textSize="12sp"
+                android:textColor="#6B7280" />
+
+            <!-- Available Shapes -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Available Shapes"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#374151" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgShapes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <!-- Available Colors -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Available Colors"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#374151" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgColors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <!-- Available Flavors -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Available Flavors"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#374151" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgFlavors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <!-- Available Toppings -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Available Toppings"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#374151" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgToppings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:textColor="#374151"
+                    android:background="@drawable/bg_button_outline_gray"
+                    app:cornerRadius="12dp" />
+
+                <Button
+                    android:id="@+id/btnCreateCake"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="Create Cake"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#EC4899"
+                    app:cornerRadius="12dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

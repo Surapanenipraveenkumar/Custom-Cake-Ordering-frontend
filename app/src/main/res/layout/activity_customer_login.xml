@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Back -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back_button_text"
+            android:textColor="#9333EA"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/bg_white_card">
+
+            <!-- Icon (SAFE TEXT INSTEAD OF EMOJI) -->
+            <FrameLayout
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_circle_purple">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cake_icon"
+                    android:textSize="29sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_back"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#1F2937"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_to_order_your_favorite_cakes"
+                android:textColor="#6B7280"
+                android:layout_gravity="center"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- Email -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:textColor="#374151"/>
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter your email"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/bg_input"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#6B7280"/>
+
+
+            <!-- Password -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textColor="#374151"/>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter your password"
+                android:inputType="textPassword"
+                android:background="@drawable/bg_input"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#6B7280"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textColor="#EC4899"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Login Button -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_btn_gradient"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don’t have an account? Register"
+                android:textColor="#EC4899"
+                android:textSize="14sp"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

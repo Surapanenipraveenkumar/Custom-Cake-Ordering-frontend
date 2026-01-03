@@ -1,0 +1,29 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+
+    <!-- Cake Base -->
+    <path
+        android:fillColor="#D6A5A5"
+        android:pathData="M8,28h48v22H8z"/>
+
+    <!-- Cream Layer -->
+    <path
+        android:fillColor="#C38B8B"
+        android:pathData="M8,28c4,-4 8,-4 12,0 4,-4 8,-4 12,0 4,-4 8,-4 12,0 4,-4 8,-4 12,0v6H8z"/>
+
+    <!-- Chocolate Decoration -->
+    <path
+        android:strokeColor="#2E1B12"
+        android:strokeWidth="2"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M22,18c4,4 8,-4 12,0s8,-4 8,0"/>
+
+    <!-- Candle -->
+    <path
+        android:strokeColor="#2E1B12"
+        android:strokeWidth="2"
+        android:pathData="M32,8v10"/>
+</vector>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/addressCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:padding="16dp"
+    android:background="@drawable/bg_delivery_option"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Top Row: Label + Radio -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Label Badge -->
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/bg_tag"
+            android:text="Home"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#EC4899"/>
+
+        <!-- Default Badge -->
+        <TextView
+            android:id="@+id/tvDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:background="@drawable/bg_tag"
+            android:text="Default"
+            android:textSize="10sp"
+            android:textColor="#10B981"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- Selection Indicator -->
+        <ImageView
+            android:id="@+id/ivSelected"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_check_circle"
+            android:visibility="gone"
+            app:tint="#EC4899"/>
+    </LinearLayout>
+
+    <!-- Address Text -->
+    <TextView
+        android:id="@+id/tvFullAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="123 Main Street, Apartment 4B, City, State - 123456"
+        android:textSize="14sp"
+        android:textColor="#374151"
+        android:maxLines="3"
+        android:ellipsize="end"/>
+
+    <!-- Landmark (if any) -->
+    <TextView
+        android:id="@+id/tvLandmark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Near City Mall"
+        android:textSize="12sp"
+        android:textColor="#6B7280"
+        android:visibility="gone"/>
+
+    <!-- Phone (if any) -->
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="📞 1234567890"
+        android:textSize="12sp"
+        android:textColor="#6B7280"
+        android:visibility="gone"/>
+
+</LinearLayout>

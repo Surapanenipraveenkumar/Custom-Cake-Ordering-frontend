@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.simats.cakeordering">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:label="CakeConnect"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.CakeOrdering">
+
+        <!-- 🔥 FIREBASE MESSAGING SERVICE -->
+        <service
+            android:name=".CakeFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- 🔹 LAUNCHER -->
+        <activity
+            android:name=".LoginTypeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 🔹 CUSTOMER LOGIN -->
+        <activity
+            android:name=".CustomerLoginActivity"
+            android:exported="false" />
+
+        <!-- 🔹 BAKER LOGIN -->
+        <activity
+            android:name=".BakerLoginActivity"
+            android:exported="false" />
+
+        <!-- 🔹 BAKER DASHBOARD -->
+        <activity
+            android:name=".BakerDashboardActivity"
+            android:exported="false" />
+
+
+        <!-- 🔹 ADD CAKE (IMPORTANT) -->
+        <activity
+            android:name=".AddCakeActivity"
+            android:exported="false" />
+
+        <!-- 🔹 BAKER DETAILS (Customer View) -->
+        <activity
+            android:name=".BakerDetailsActivity"
+            android:exported="false" />
+
+        <!-- 🔹 HOME -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+
+        <!-- 🔹 CAKE DETAILS -->
+        <activity
+            android:name=".CakeDetailsActivity"
+            android:exported="false" />
+
+        <!-- 🔹 CAKE CUSTOMIZATION -->
+        <activity
+            android:name=".CakeCustomizationActivity"
+            android:exported="false" />
+
+        <!-- 🔹 CART -->
+        <activity
+            android:name=".CartActivity"
+            android:exported="false" />
+
+        <!-- 🔹 CHECKOUT -->
+        <activity
+            android:name=".CheckoutActivity"
+            android:exported="false" />
+
+        <!-- 🔹 PAYMENT -->
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false" />
+
+        <!-- 🔹 ORDER CONFIRMATION -->
+        <activity
+            android:name=".OrderConfirmationActivity"
+            android:exported="false" />
+
+        <!-- 🔹 REGISTER -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <!-- 🔹 MANAGE CAKE -->
+        <activity
+            android:name=".ManageCakeActivity"
+            android:exported="false" />
+
+        <!-- 🔹 BAKER ORDERS -->
+        <activity
+            android:name=".BakerOrdersActivity"
+            android:exported="false" />
+
+        <!-- 🔹 BAKER MESSAGES -->
+        <activity
+            android:name=".BakerMessagesActivity"
+            android:exported="false" />
+
+        <!-- 🔹 CHAT -->
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+
+        <!-- 🔹 BAKER PROFILE -->
+        <activity
+            android:name=".BakerProfileActivity"
+            android:exported="false" />
+
+        <!-- 🔹 CUSTOMER CHAT -->
+        <activity
+            android:name=".CustomerChatActivity"
+            android:exported="false" />
+
+        <!-- 🔹 BAKER REGISTER -->
+        <activity
+            android:name=".BakerRegisterActivity"
+            android:exported="false" />
+
+        <!-- 🔹 BAKER ANALYTICS -->
+        <activity
+            android:name=".BakerAnalyticsActivity"
+            android:exported="false" />
+
+        <!-- 🔹 BAKER NOTIFICATIONS -->
+        <activity
+            android:name=".BakerNotificationsActivity"
+            android:exported="false" />
+
+        <!-- 🔹 CUSTOMER PROFILE -->
+        <activity
+            android:name=".CustomerProfileActivity"
+            android:exported="false" />
+
+        <!-- 🔹 CUSTOMER ORDERS -->
+        <activity
+            android:name=".CustomerOrdersActivity"
+            android:exported="false" />
+
+        <!-- 🔹 ORDER DETAILS -->
+        <activity
+            android:name=".OrderDetailsActivity"
+            android:exported="false" />
+
+        <!-- 🔹 ORDER TRACKING -->
+        <activity
+            android:name=".OrderTrackingActivity"
+            android:exported="false" />
+
+        <!-- 🔹 EDIT PROFILE -->
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+
+        <!-- 🔹 CUSTOMER MESSAGES -->
+        <activity
+            android:name=".CustomerMessagesActivity"
+            android:exported="false" />
+
+        <!-- 🔹 FAVORITES -->
+        <activity
+            android:name=".FavoritesActivity"
+            android:exported="false" />
+
+        <!-- 🔹 CUSTOMER NOTIFICATIONS -->
+        <activity
+            android:name=".CustomerNotificationsActivity"
+            android:exported="false" />
+
+        <!-- 🔹 NEARBY BAKERS -->
+        <activity
+            android:name=".NearbyBakersActivity"
+            android:exported="false" />
+
+        <!-- 🔹 AI CAKE GENERATOR -->
+        <activity
+            android:name=".AiCakeGeneratorActivity"
+            android:exported="false" />
+
+        <!-- 🔹 DELIVERY LOGIN -->
+        <activity
+            android:name=".DeliveryLoginActivity"
+            android:exported="false" />
+
+        <!-- 🔹 DELIVERY REGISTER -->
+        <activity
+            android:name=".DeliveryRegisterActivity"
+            android:exported="false" />
+
+        <!-- 🔹 DELIVERY DASHBOARD -->
+        <activity
+            android:name=".DeliveryDashboardActivity"
+            android:exported="false" />
+
+        <!-- 🔹 DELIVERY ORDERS -->
+        <activity
+            android:name=".DeliveryOrdersActivity"
+            android:exported="false" />
+
+        <!-- 🔹 DELIVERY ORDER DETAIL -->
+        <activity
+            android:name=".DeliveryOrderDetailActivity"
+            android:exported="false" />
+
+        <!-- 🔹 DELIVERY PROFILE -->
+        <activity
+            android:name=".DeliveryProfileActivity"
+            android:exported="false" />
+
+        <!-- 🔹 DELIVERY EDIT PROFILE -->
+        <activity
+            android:name=".DeliveryEditProfileActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

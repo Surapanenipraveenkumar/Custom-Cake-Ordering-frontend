@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="8dp">
+
+    <!-- Month Name -->
+    <TextView
+        android:id="@+id/txtMonth"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="Jan"
+        android:textColor="#6B7280"
+        android:textSize="13sp"/>
+
+    <!-- Progress Bar Container -->
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="12dp"
+        android:background="@drawable/bg_progress_bar">
+
+        <View
+            android:id="@+id/progressBar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_trend_progress"/>
+    </FrameLayout>
+
+    <!-- Amount -->
+    <TextView
+        android:id="@+id/txtAmount"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="₹0"
+        android:textColor="#111827"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:gravity="end"/>
+</LinearLayout>

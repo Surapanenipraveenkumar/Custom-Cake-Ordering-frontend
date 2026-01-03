@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5F7">
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="100dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- ===== BEAUTIFUL HEADER CARD ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_header_gradient"
+                android:padding="20dp"
+                android:layout_marginBottom="16dp">
+
+                <!-- Header Row -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🎂"
+                            android:textSize="28sp"/>
+
+                        <TextView
+                            android:id="@+id/tvAppName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="CakeConnect"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivNotification"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_notification"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_circle_white_small"/>
+                </RelativeLayout>
+
+                <!-- Location -->
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="📍 Select Location"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFFCC" />
+
+                <!-- Search Bar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_search_white"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔍"
+                        android:textSize="18sp"/>
+
+                    <EditText
+                        android:id="@+id/etSearch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="12dp"
+                        android:background="@null"
+                        android:hint="Search for cakes, bakers..."
+                        android:textColor="#111827"
+                        android:textColorHint="#9CA3AF"
+                        android:textSize="15sp"
+                        android:inputType="text"
+                        android:imeOptions="actionSearch"
+                        android:maxLines="1"/>
+                </LinearLayout>
+
+                <!-- Action Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnAiCake"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:text="✨ AI Cake\nGenerator"
+                        android:textAllCaps="false"
+                        android:textSize="13sp"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="#EC4899"
+                        app:cornerRadius="14dp"/>
+
+                    <Button
+                        android:id="@+id/btnNearbyBakers"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="👨‍🍳 Nearby\nBakers"
+                        android:textAllCaps="false"
+                        android:textSize="13sp"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="#8B5CF6"
+                        app:cornerRadius="14dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ===== AVAILABLE CAKES HEADER ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Available Cakes"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827"/>
+
+                <TextView
+                    android:id="@+id/tvAvailableCakes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(0)"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280" />
+            </LinearLayout>
+
+            <!-- ===== CAKES LIST ===== -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerCakes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ================= MODERN FLOATING BOTTOM NAVIGATION ================= -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="12dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingHorizontal="8dp">
+
+            <!-- Home Button -->
+            <LinearLayout
+                android:id="@+id/navHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true">
+
+                <FrameLayout
+                    android:id="@+id/navHomeIndicator"
+                    android:layout_width="56dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_nav_item_selected">
+
+                    <ImageView
+                        android:id="@+id/navHomeIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_home"
+                        app:tint="@android:color/white"/>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/navHomeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textSize="11sp"
+                    android:textColor="#EC4899"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+
+            <!-- Messages Button -->
+            <LinearLayout
+                android:id="@+id/navMessages"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true">
+
+                <FrameLayout
+                    android:id="@+id/navMessagesIndicator"
+                    android:layout_width="56dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent">
+
+                    <ImageView
+                        android:id="@+id/navMessagesIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_chat"
+                        app:tint="#9CA3AF"/>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/navMessagesLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Messages"
+                    android:textSize="11sp"
+                    android:textColor="#9CA3AF"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+
+            <!-- Cart Button -->
+            <LinearLayout
+                android:id="@+id/navCart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true">
+
+                <FrameLayout
+                    android:id="@+id/navCartIndicator"
+                    android:layout_width="56dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent">
+
+                    <ImageView
+                        android:id="@+id/navCartIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_cart"
+                        app:tint="#9CA3AF"/>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/navCartLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cart"
+                    android:textSize="11sp"
+                    android:textColor="#9CA3AF"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+
+            <!-- Profile Button -->
+            <LinearLayout
+                android:id="@+id/navProfile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true">
+
+                <FrameLayout
+                    android:id="@+id/navProfileIndicator"
+                    android:layout_width="56dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent">
+
+                    <ImageView
+                        android:id="@+id/navProfileIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_profile"
+                        app:tint="#9CA3AF"/>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/navProfileLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textSize="11sp"
+                    android:textColor="#9CA3AF"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,29 @@
+{
+    "project_info": {
+        "project_number": "751440602510",
+        "project_id": "custom-cake-ordering-app",
+        "storage_bucket": "custom-cake-ordering-app.firebasestorage.app"
+    },
+    "client": [
+        {
+            "client_info": {
+                "mobilesdk_app_id": "1:751440602510:android:ac775face5f7e6ac1f70df",
+                "android_client_info": {
+                    "package_name": "com.simats.cakeordering"
+                }
+            },
+            "oauth_client": [],
+            "api_key": [
+                {
+                    "current_key": "AIzaSyDWdqf7zuQHgR97ax5rrCP3gZubFtMCmxM"
+                }
+            ],
+            "services": {
+                "appinvite_service": {
+                    "other_platform_oauth_client": []
+                }
+            }
+        }
+    ],
+    "configuration_version": "1"
+}

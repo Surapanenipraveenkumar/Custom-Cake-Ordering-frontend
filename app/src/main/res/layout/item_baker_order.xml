@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFFFFF">
+
+        <!-- Top Row: Image + Details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Cake Image -->
+            <ImageView
+                android:id="@+id/imgCake"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sample_cake"
+                android:background="@drawable/bg_rounded_image"/>
+
+            <!-- Details -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <!-- Cake Name + Status -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txtCakeName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Chocolate Dream Cake"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#111827"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+
+                    <TextView
+                        android:id="@+id/txtStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="pending"
+                        android:textSize="11sp"
+                        android:textColor="#F59E0B"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:background="@drawable/bg_status_pending"/>
+
+                </LinearLayout>
+
+                <!-- Customer Name -->
+                <TextView
+                    android:id="@+id/txtCustomerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="for Emily Johnson"
+                    android:textSize="13sp"
+                    android:textColor="#6B7280"/>
+
+                <!-- Price -->
+                <TextView
+                    android:id="@+id/txtPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="₹3600"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#10B981"/>
+
+                <!-- Date/Time -->
+                <TextView
+                    android:id="@+id/txtDateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="📅 2024-12-15 at 14:00"
+                    android:textSize="12sp"
+                    android:textColor="#6B7280"/>
+
+                <!-- Delivery Type -->
+                <TextView
+                    android:id="@+id/txtDeliveryType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="🚗 Delivery"
+                    android:textSize="12sp"
+                    android:textColor="#6B7280"/>
+
+                <!-- Custom Options -->
+                <TextView
+                    android:id="@+id/txtCustomOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Custom: Heart shape, Dark chocolate"
+                    android:textSize="12sp"
+                    android:textColor="#9CA3AF"
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
+
+                <!-- Delivery Address -->
+                <TextView
+                    android:id="@+id/txtDeliveryAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="📍 Delivery Address"
+                    android:textSize="12sp"
+                    android:textColor="#6B7280"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Action Button -->
+        <Button
+            android:id="@+id/btnAction"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:text="Start Baking"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#3B82F6"
+            app:cornerRadius="24dp"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

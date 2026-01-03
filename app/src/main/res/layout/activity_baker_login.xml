@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF3E0"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 🔙 BACK BUTTON -->
+        <LinearLayout
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="#FF6D00" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:textSize="16sp"
+                android:textColor="#FF6D00"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- 🟠 TOP ORANGE CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/bg_orange_card">
+
+            <TextView
+                android:text="👨‍🍳"
+                android:textSize="36sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Baker Portal"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Join our community of talented bakers and grow your business"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="• Manage your cake listings\n• Track orders &amp; income\n• Connect with customers"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- ⚪ LOGIN CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:layout_margin="16dp"
+            android:padding="24dp"
+            android:orientation="vertical"
+            android:elevation="8dp">
+
+            <TextView
+                android:text="Baker Login"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Welcome back to your dashboard"
+                android:textSize="14sp"
+                android:textColor="#6B7280"
+                android:layout_marginBottom="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_input"
+                android:padding="12dp" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:text="Login to Dashboard"
+                android:textColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#FF6D00" />
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:text="New baker? Register here"
+                android:textSize="14sp"
+                android:textColor="#FF6D00"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

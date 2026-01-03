@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CakeConnect</string>
+    <string name="cake_icon">Cake</string>
+    <string name="welcome_to_dashboard">Welcome to Dashboard</string>
+    <string name="back_button_text">← Back</string>
+    <string name="cart">🛒
+        Cart</string>
+    <string name="shape">Shape</string>
+    <string name="color">Color</string>
+    <string name="flavor">Flavor</string>
+    <string name="toppings_select_multiple">Toppings (Select Multiple)</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="login_to_order_your_favorite_cakes">Login to order your favorite cakes</string>
+    <string name="todo">TODO</string>
+    <string name="_34_000">₹34,000</string>
+    <string name="_3">3</string>
+    <string name="profile">Profile</string>
+    <string name="messages">Messages</string>
+    <string name="orders">Orders</string>
+    <string name="home">Home</string>
+</resources>
